@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/theme/app_theme.dart';
+import 'package:twitter_clone/theme/theme.dart';
 
 void main() {
   runApp(const MyApp());

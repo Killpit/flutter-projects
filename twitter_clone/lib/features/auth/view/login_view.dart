@@ -26,7 +26,7 @@ class _LoginViewState extends State<LoginView> {
     return Scaffold(
       appBar: appbar,
       body: SingleChildScrollView(
-        child: Padding(padding: EdgeInsets.symmetric(horizontal: 20),
+        child: Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
             //textfield1

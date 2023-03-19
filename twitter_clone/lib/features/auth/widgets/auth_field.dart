@@ -3,7 +3,10 @@ import 'package:twitter_clone/theme/pallete.dart';
 
 class AuthField extends StatelessWidget {
   final TextEditingController controller;
-  const AuthField({super.key, required this.controller, });
+  final String hintText;
+  const AuthField({super.key, 
+  required this.controller,
+  required this.hintText,});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +21,7 @@ class AuthField extends StatelessWidget {
           ),
         ),
         contentPadding: const EdgeInsets.all(22),
+        hintText: '',
       ),
     );
   }

@@ -17,6 +17,7 @@ class AuthField extends StatelessWidget {
             width: 3,
           ),
         ),
+        contentPadding: const EdgeInsets.all(22),
       ),
     );
   }

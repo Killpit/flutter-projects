@@ -23,7 +23,7 @@ class AuthField extends StatelessWidget {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5),
           borderSide: const BorderSide(
-            color: Pallete.blueColor,
+            color: Pallete.greyColor,
             width: 3,
           ),
         ),

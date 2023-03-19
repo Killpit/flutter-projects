@@ -8,7 +8,9 @@ class AuthField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      
+      decoration: InputDecoration(
+        focusedBorder: OutlineInputBorder()
+      ),
     );
   }
 }

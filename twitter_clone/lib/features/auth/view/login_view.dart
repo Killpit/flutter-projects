@@ -36,11 +36,12 @@ class _LoginViewState extends State<LoginView> {
                 hintText: 'Email',
               ),
               const SizedBox(height: 25),
-              
+
               AuthField(
                 controller: passwordController,
                 hintText: 'Password',
               ),
+              const SizedBox(height: 40),
               //button
               //textspan
             ],

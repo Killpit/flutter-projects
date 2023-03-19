@@ -20,7 +20,10 @@ class _LoginViewState extends State<LoginView> {
         child: Padding(padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            
+            //textfield1
+            //textfield2
+            //button
+            //textspan
           ],
         )
         ),

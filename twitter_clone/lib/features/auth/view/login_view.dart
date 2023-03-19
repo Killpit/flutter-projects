@@ -32,10 +32,12 @@ class _LoginViewState extends State<LoginView> {
             //textfield1
             AuthField(
               controller: emailController,
+              hintText: 'Email',
             ),
             //textfield2
             AuthField(
               controller: passwordController,
+              hintText: 'Password',
             ),
             //button
             //textspan

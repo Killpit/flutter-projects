@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/common/rounded_small_button.dart';
 import 'package:twitter_clone/constants/ui_constants.dart';
 import 'package:twitter_clone/features/auth/widgets/auth_field.dart';
 
@@ -43,6 +44,7 @@ class _LoginViewState extends State<LoginView> {
               ),
               const SizedBox(height: 40),
               //button
+              RoundedSmallButton(onTap: () {}, label: 'Done'),
               //textspan
             ],
           )

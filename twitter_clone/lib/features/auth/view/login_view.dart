@@ -50,7 +50,11 @@ class _LoginViewState extends State<LoginView> {
                 child: RoundedSmallButton(onTap: () {}, label: 'Done', 
                 ),
               ),
-              //textspan
+              const SizedBox(height: 40),
+              RichText(text: TextSpan(
+                text: "Don't have an account?"
+              ),
+              ),
             ],
           )
           ),

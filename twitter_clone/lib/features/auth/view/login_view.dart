@@ -52,7 +52,12 @@ class _LoginViewState extends State<LoginView> {
               ),
               const SizedBox(height: 40),
               RichText(text: TextSpan(
-                text: "Don't have an account?"
+                text: "Don't have an account?",
+                children: [
+                  TextSpan(
+                    text: ' Sign up',
+                  )
+                ],
               ),
               ),
             ],

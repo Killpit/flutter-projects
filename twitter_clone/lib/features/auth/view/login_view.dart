@@ -46,8 +46,6 @@ class _LoginViewState extends State<LoginView> {
               const SizedBox(height: 40),
               //button
               RoundedSmallButton(onTap: () {}, label: 'Done', 
-              backgroundColor: Pallete.backgroundColor, 
-              textColor: Pallete.whiteColor,
               ),
               //textspan
             ],

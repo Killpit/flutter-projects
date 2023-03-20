@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_clone/theme/pallete.dart';
 
 class RoundedSmallButton extends StatelessWidget {
   final VoidCallback onTap;
@@ -10,8 +11,8 @@ class RoundedSmallButton extends StatelessWidget {
     super.key,
     required this.onTap,
     required this.label,
-    required this.backgroundColor,
-    required this.textColor,
+    this.backgroundColor = Pallete.backgroundColor,
+    this.textColor = Pallete.whiteColor,
     });
 
   @override

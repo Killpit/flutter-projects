@@ -7,6 +7,9 @@ import 'package:twitter_clone/features/auth/widgets/auth_field.dart';
 import 'package:twitter_clone/theme/theme.dart';
 
 class SignUpView extends StatefulWidget {
+  static route() => MaterialPageRoute(
+    builder: (contest) => const LoginView(),
+  );
   const SignUpView({super.key});
 
   @override

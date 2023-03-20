@@ -45,7 +45,10 @@ class _LoginViewState extends State<LoginView> {
               ),
               const SizedBox(height: 40),
               //button
-              RoundedSmallButton(onTap: () {}, label: 'Done', 
+              Align(
+                alignment: Alignment.topRight,
+                child: RoundedSmallButton(onTap: () {}, label: 'Done', 
+                ),
               ),
               //textspan
             ],

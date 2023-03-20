@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:twitter_clone/common/common.dart';
 import 'package:twitter_clone/constants/constants.dart';
 import 'package:twitter_clone/features/auth/widgets/auth_field.dart';
-import '../../../theme/pallete.dart';
+import 'package:twitter_clone/theme/theme.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});

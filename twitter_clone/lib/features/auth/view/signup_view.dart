@@ -66,9 +66,8 @@ class _SignUpViewState extends State<SignUpView> {
                       fontSize: 16,
                     ),
                     recognizer: TapGestureRecognizer()..onTap = () {
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => const LoginView(),
-                      ),
+                      Navigator.push(context,
+                      LoginView.route(),
                       );
                     },
                   ),

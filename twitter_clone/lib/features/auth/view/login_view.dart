@@ -68,7 +68,9 @@ class _LoginViewState extends State<LoginView> {
                       fontSize: 16,
                     ),
                     recognizer: TapGestureRecognizer()..onTap = () {
-
+                      MaterialPageRoute(
+                        builder: (context) => const LoginView(),
+                      );
                     },
                   ),
                 ],

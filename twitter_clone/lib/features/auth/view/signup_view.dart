@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_clone/constants/ui_constants.dart';
+import 'package:twitter_clone/constants/constants.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});

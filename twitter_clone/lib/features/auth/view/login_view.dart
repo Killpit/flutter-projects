@@ -56,7 +56,11 @@ class _LoginViewState extends State<LoginView> {
                 children: [
                   TextSpan(
                     text: ' Sign up',
-                  )
+                    style: TextStyle(
+                      color: Pallete.blueColor,
+                      fontSize: 16,
+                    ),
+                  ),
                 ],
               ),
               ),

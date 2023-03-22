@@ -3,7 +3,7 @@ import 'package:fpdart/fpdart.dart';
 import 'package:twitter_clone/core/type_defs.dart';
 
 abstract class IAuthAPI {
-  FutureEither signUp({
+  FutureEither<Account> signUp({
     required String email,
     required String password,
   });

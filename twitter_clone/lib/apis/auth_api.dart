@@ -1,5 +1,6 @@
-import 'package:appwrite/appwrite.dart';
 import 'package:twitter_clone/core/core.dart';
+import 'package:appwrite/models.dart';
+
 
 abstract class IAuthAPI {
   FutureEither<Account> signUp({

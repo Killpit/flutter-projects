@@ -29,7 +29,8 @@ class AuthAPI implements IAuthAPI {
       return right(account);
     } on AppwriteException catch (e, stackTrace) {
       return left(
-        Failure(e.toString(), stackTrace),
+        Failure(e.message ?? 'Some unexpected error occurred', 
+        stackTrace),
       );
     } catch (e, stackTrace) {
       return left(

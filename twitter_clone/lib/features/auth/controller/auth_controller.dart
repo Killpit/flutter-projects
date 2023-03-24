@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:twitter_clone/apis/auth_api.dart';
 import 'package:twitter_clone/core/utils.dart';
 
+
+
 class AuthController extends StateNotifier<bool> {
   final AuthAPI _authAPI;
   AuthController({required AuthAPI authAPI}): _authAPI = authAPI, super(false);
@@ -18,6 +20,8 @@ class AuthController extends StateNotifier<bool> {
       email: email, 
       password: password,
       );
-      res.fold((l) => showSnackBar(context, l.message), (r) => print(r.name));
+      res.fold(
+        (l) => showSnackBar(context, l.message), 
+        (r) => print(r.name));
   }
 }

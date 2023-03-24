@@ -17,5 +17,6 @@ class AuthController extends StateNotifier<bool> {
       email: email, 
       password: password,
       );
+      res.fold((l) => null, (r) => print(r.name));
   }
 }

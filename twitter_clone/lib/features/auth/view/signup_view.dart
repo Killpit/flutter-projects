@@ -63,7 +63,8 @@ class _SignUpViewState extends ConsumerState<SignUpView> {
               //button
               Align(
                 alignment: Alignment.topRight,
-                child: RoundedSmallButton(onTap: () {}, label: 'Done', 
+                child: RoundedSmallButton(onTap: onSignUp, 
+                label: 'Done', 
                 ),
               ),
               const SizedBox(height: 40),

@@ -25,6 +25,6 @@ class AuthController extends StateNotifier<bool> {
       );
       res.fold(
         (l) => showSnackBar(context, l.message), 
-        (r) => print(r.name));
+        (r) => print(r.email));
   }
 }

@@ -28,6 +28,10 @@ class _SignUpViewState extends State<SignUpView> {
     passwordController.dispose();
   }
 
+  void onSignUp() {
+    
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

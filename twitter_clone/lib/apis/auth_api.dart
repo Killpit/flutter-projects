@@ -35,9 +35,11 @@ class AuthAPI implements IAuthAPI {
   @override
   Future<model.Account?> currentUserAccount() async {
     try {
-      return await _account.get();
-    } on AppwriteException catch (e, stackTrace) {
-    } catch (e, stackTrace) {
+      return _account.get();
+    } on AppwriteException catch (e) {
+      return null;
+    } catch (e) {
+      return null;
     }
   }
   

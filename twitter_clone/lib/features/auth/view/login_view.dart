@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:twitter_clone/common/loading_page.dart';
 import 'package:twitter_clone/common/rounded_small_button.dart';
 import 'package:twitter_clone/constants/constants.dart';
 import 'package:twitter_clone/features/auth/controller/auth_controller.dart';
@@ -41,10 +42,12 @@ class _LoginViewState extends ConsumerState<LoginView> {
   @override
   Widget build(BuildContext context) {
     final isLoading = ref.watch(authControllerProvider);
-    
+
     return Scaffold(
       appBar: appbar,
-      body: Center(
+      body: isLoading 
+      ? const Loader() 
+      : Center(
         child: SingleChildScrollView(
           child: Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(

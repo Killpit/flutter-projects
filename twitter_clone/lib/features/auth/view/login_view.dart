@@ -31,8 +31,7 @@ class _LoginViewState extends ConsumerState<LoginView> {
   }
 
   void onLogin() {
-    final res = ref.read(authControllerProvider.notifier)
-    .signUp(
+    final res = ref.read(authControllerProvider.notifier).login(
       email: emailController.text, 
       password: passwordController.text, 
       context: context,
@@ -63,7 +62,9 @@ class _LoginViewState extends ConsumerState<LoginView> {
               //button
               Align(
                 alignment: Alignment.topRight,
-                child: RoundedSmallButton(onTap: () {}, label: 'Done', 
+                child: RoundedSmallButton(
+                  onTap: onLogin, 
+                  label: 'Done', 
                 ),
               ),
               const SizedBox(height: 40),

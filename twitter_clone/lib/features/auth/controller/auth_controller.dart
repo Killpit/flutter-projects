@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:twitter_clone/apis/auth_api.dart';
 import 'package:twitter_clone/core/utils.dart';
+import 'package:twitter_clone/features/auth/view/login_view.dart';
 
 final authControllerProvider = StateNotifierProvider<AuthController, bool>((ref) {
   return AuthController(authAPI: ref.watch(authAPIProvider),
@@ -28,7 +29,11 @@ class AuthController extends StateNotifier<bool> {
       state = false;
       res.fold(
         (l) => showSnackBar(context, l.message), 
-        (r) => print(r.email));
+        (r) {
+          showSnackBar(context, 'Account created! Please login.');
+          Navigator.push(context, LoginView.route());
+        },
+      );
   }
 
   void login({

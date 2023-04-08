@@ -13,7 +13,7 @@ class AuthController extends StateNotifier<bool> {
   AuthController({required AuthAPI authAPI}): _authAPI = authAPI, super(false);
   //state = isLoading
 
-  Future<void> signUp({
+  void signUp({
     required String email,
     required String password,
     required BuildContext context,

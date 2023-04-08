@@ -13,6 +13,8 @@ class AuthController extends StateNotifier<bool> {
   AuthController({required AuthAPI authAPI}): _authAPI = authAPI, super(false);
   //state = isLoading
 
+  // _account.get() != null ? HomeScreen : LoginScreen
+
   void signUp({
     required String email,
     required String password,

@@ -30,7 +30,6 @@ class AuthController extends StateNotifier<bool> {
       res.fold(
         (l) => showSnackBar(context, l.message), 
         (r) {
-          showSnackBar(context, 'Account created! Please login.');
           Navigator.push(context, LoginView.route());
         },
       );

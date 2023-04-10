@@ -70,7 +70,7 @@ class UserModel {
       following: List<String>.from(map['following']),
       profilePic: map['profilePic'] ?? '',
       bannerPic: map['bannerPic'] ?? '',
-      uid: map['uid'] ?? '',
+      uid: map['\$id'] ?? '',
       bio: map['bio'] ?? '',
       isTwitterBlue: map['isTwitterBlue'] ?? false,
     );

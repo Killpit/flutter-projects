@@ -1,5 +1,7 @@
 import 'package:collection/collection.dart';
+import 'package:flutter/material.dart';
 
+@immutable
 class UserModel {
   final String email;
   final String name;
@@ -10,7 +12,7 @@ class UserModel {
   final String uid;
   final String bio;
   final bool isTwitterBlue;
-  UserModel({
+  const UserModel({
     required this.email,
     required this.name,
     required this.followers,

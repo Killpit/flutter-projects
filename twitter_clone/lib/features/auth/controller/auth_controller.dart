@@ -6,6 +6,7 @@ import 'package:twitter_clone/apis/user_api.dart';
 import 'package:twitter_clone/core/utils.dart';
 import 'package:twitter_clone/features/auth/view/login_view.dart';
 import 'package:twitter_clone/features/home/view/home_view.dart';
+import 'package:twitter_clone/models/user_model.dart';
 
 final authControllerProvider = 
 StateNotifierProvider<AuthController, bool>((ref) {
@@ -47,6 +48,17 @@ class AuthController extends StateNotifier<bool> {
       res.fold(
         (l) => showSnackBar(context, l.message), 
         (r) {
+          UserModel userModel = UserModel(
+            email: email,
+            name: getNameFromEmail(email),
+            followers: [],
+            following: [],
+            profilePic: '',
+            bannerPic: '',
+            uid: '',
+            bio: '',
+            isTwitterBlue: false,
+          );
           Navigator.push(context, HomeView.route());
         },
       );

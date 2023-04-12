@@ -51,14 +51,16 @@ class AuthController extends StateNotifier<bool> {
           UserModel userModel = UserModel(
             email: email,
             name: getNameFromEmail(email),
-            followers: [],
-            following: [],
+            followers: const [],
+            following: const [],
             profilePic: '',
             bannerPic: '',
             uid: '',
             bio: '',
             isTwitterBlue: false,
           );
+          _userAPI.saveUserData(userModel);
+          showSnackBar(context, 'Account created! Please login.');
           Navigator.push(context, HomeView.route());
         },
       );

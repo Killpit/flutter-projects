@@ -47,7 +47,7 @@ class AuthController extends StateNotifier<bool> {
       state = false;
       res.fold(
         (l) => showSnackBar(context, l.message), 
-        (r) {
+        (r) async {
           UserModel userModel = UserModel(
             email: email,
             name: getNameFromEmail(email),
@@ -59,7 +59,7 @@ class AuthController extends StateNotifier<bool> {
             bio: '',
             isTwitterBlue: false,
           );
-          _userAPI.saveUserData(userModel);
+          final res = await _userAPI.saveUserData(userModel);
           showSnackBar(context, 'Account created! Please login.');
           Navigator.push(context, HomeView.route());
         },

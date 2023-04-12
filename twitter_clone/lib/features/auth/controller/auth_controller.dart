@@ -59,9 +59,11 @@ class AuthController extends StateNotifier<bool> {
             bio: '',
             isTwitterBlue: false,
           );
-          final res = await _userAPI.saveUserData(userModel);
-          showSnackBar(context, 'Account created! Please login.');
-          Navigator.push(context, HomeView.route());
+          final res2 = await _userAPI.saveUserData(userModel);
+          res2.fold((l) => showSnackBar(context, l.message), (r) {
+            showSnackBar(context, 'Account created! Please login.');
+            Navigator.push(context, HomeView.route());
+          });
         },
       );
   }

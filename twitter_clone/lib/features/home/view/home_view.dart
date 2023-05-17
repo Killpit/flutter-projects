@@ -36,7 +36,10 @@ void onPageChange(int index) {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: const Icon(Icons.add),
+        child: const Icon(
+          Icons.add, 
+          color: Pallete.whiteColor,
+        ),
       ),
       bottomNavigationBar: CupertinoTabBar(
         currentIndex: _page,

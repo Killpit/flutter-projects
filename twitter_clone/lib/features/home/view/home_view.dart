@@ -34,7 +34,10 @@ void onPageChange(int index) {
         index: _page,
         children: UIConstants.bottomTabBarPages,
       ),
-      
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
       bottomNavigationBar: CupertinoTabBar(
         currentIndex: _page,
         onTap: onPageChange,

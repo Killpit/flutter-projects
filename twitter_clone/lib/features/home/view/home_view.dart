@@ -32,7 +32,7 @@ void onPageChange(int index) {
       appBar: appBar,
       body: IndexedStack(
         index: _page,
-        children: [],
+        children: UIConstants.bottomTabBarPages,
       ),
       bottomNavigationBar: CupertinoTabBar(
         currentIndex: _page,

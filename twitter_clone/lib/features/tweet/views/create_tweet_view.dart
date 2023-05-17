@@ -23,7 +23,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
           icon: const Icon(Icons.close, size: 30),
         ),
         
-      )
+      ),
     );
   }
 }

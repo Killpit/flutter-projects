@@ -25,9 +25,14 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
           icon: const Icon(Icons.close, size: 30),
         ),
         actions: [
-          RoundedSmallButton(onTap: () {}, label: 'Tweet', backgroundColor: Pallete.blueColor),
+          RoundedSmallButton(
+            onTap: () {}, 
+            label: 'Tweet', 
+            backgroundColor: Pallete.blueColor,
+            textColor: Pallete.whiteColor),
         ],
       ),
+      
     );
   }
 }

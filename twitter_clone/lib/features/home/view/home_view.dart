@@ -30,6 +30,10 @@ void onPageChange(int index) {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar,
+      body: IndexedStack(
+        index: _page,
+        children: [],
+      ),
       bottomNavigationBar: CupertinoTabBar(
         currentIndex: _page,
         onTap: onPageChange,

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:twitter_clone/features/home/view/home_view.dart';
 
 class CreateTweetScreen extends ConsumerStatefulWidget {
+  static route() => MaterialPageRoute(
+    builder: (context) => const CreateTweetScreen(),
+    );
   const CreateTweetScreen({super.key});
 
   @override
@@ -16,7 +20,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.close, size: 30)
+          icon: const Icon(Icons.close, size: 30),
         ),
       )
     );

@@ -51,7 +51,9 @@ void onPageChange(int index) {
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              AssetsConstants.notifFilledIcon,
+              _page == 2
+                ? AssetsConstants.notifFilledIcon
+                : AssetsConstants.notifOutlinedIcon,
               color: Pallete.whiteColor,
               ),
           ),

@@ -24,8 +24,11 @@ class _HomeViewState extends State<HomeView> {
       bottomNavigationBar: CupertinoTabBar(
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(AssetsConstants.homeFilledIcon,),
+            icon: SvgPicture.asset(
+              AssetsConstants.homeFilledIcon,
+              ),
           ),
+          
         ],
       ),
     );

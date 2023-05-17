@@ -34,6 +34,7 @@ void onPageChange(int index) {
         index: _page,
         children: UIConstants.bottomTabBarPages,
       ),
+      
       bottomNavigationBar: CupertinoTabBar(
         currentIndex: _page,
         onTap: onPageChange,

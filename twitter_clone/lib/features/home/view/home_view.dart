@@ -23,6 +23,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: appBar,
       bottomNavigationBar: CupertinoTabBar(
+        backgroundColor: Pallete.backgroundColor,
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
@@ -33,6 +34,12 @@ class _HomeViewState extends State<HomeView> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               AssetsConstants.searchIcon,
+              color: Pallete.whiteColor,
+              ),
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              AssetsConstants.notifFilledIcon,
               color: Pallete.whiteColor,
               ),
           ),

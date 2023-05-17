@@ -39,6 +39,7 @@ void onPageChange(int index) {
         child: const Icon(
           Icons.add, 
           color: Pallete.whiteColor,
+          size: 28,
         ),
       ),
       bottomNavigationBar: CupertinoTabBar(

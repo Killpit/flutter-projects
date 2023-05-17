@@ -32,7 +32,16 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
             textColor: Pallete.whiteColor),
         ],
       ),
-      
+      body: SafeArea(child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              
+            )
+          ],
+        )
+      ),
+      ),
     );
   }
 }

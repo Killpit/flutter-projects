@@ -56,7 +56,8 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
                   radius: 30,
                 ),
                 const SizedBox(width: 15),
-                TextField(
+                Expanded(
+                  child: TextField(
                   controller: tweetTextController,
                   style: const TextStyle(
                     fontSize: 22,
@@ -66,6 +67,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
                     hintStyle: TextStyle(
                       color: Pallete.greyColor,
                     ),
+                  ),
                   ),
                 ),
               ],

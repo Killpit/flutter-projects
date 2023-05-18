@@ -17,6 +17,8 @@ class CreateTweetScreen extends ConsumerStatefulWidget {
 }
 
 class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
+  final tweetTextController = TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
     final currentUser = ref.watch(currentUserDetailsProvider).value;
@@ -47,6 +49,9 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
                   backgroundImage: NetworkImage(currentUser.profilePic),
                   radius: 30,
                 ),
+                const SizedBox(
+
+                )
               ],
             )
           ],

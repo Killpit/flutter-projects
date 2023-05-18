@@ -85,7 +85,10 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
       bottomNavigationBar: Row(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0).copyWith(
+              left: 15,
+              right: 15,
+            ),
             child: SvgPicture.asset(AssetsConstants.galleryIcon),
             ),
         ],

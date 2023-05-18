@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:twitter_clone/common/common.dart';
+import 'package:twitter_clone/constants/assets_constants.dart';
 import 'package:twitter_clone/features/auth/controller/auth_controller.dart';
 import 'package:twitter_clone/features/home/view/home_view.dart';
 import 'package:twitter_clone/theme/pallete.dart';
@@ -79,6 +81,11 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
           ],
         )
       ),
+      ),
+      bottomNavigationBar: Row(
+        children: [
+          SvgPicture.asset(AssetsConstants.galleryIcon),
+        ]
       ),
     );
   }

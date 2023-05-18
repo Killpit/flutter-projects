@@ -45,6 +45,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
               children: [
                 CircleAvatar(
                   backgroundImage: NetworkImage(currentUser.profilePic),
+                  radius: 30,
                 ),
               ],
             )

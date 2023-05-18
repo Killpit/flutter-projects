@@ -83,6 +83,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
       ),
       ),
       bottomNavigationBar: Container(
+        padding: const EdgeInsets.only(bottom: 10),
         decoration: const BoxDecoration(
           border: Border(
             top: BorderSide(

@@ -66,6 +66,8 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
                     hintText: "What's happening?",
                     hintStyle: TextStyle(
                       color: Pallete.greyColor,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                   ),

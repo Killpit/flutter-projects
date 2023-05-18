@@ -34,7 +34,9 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.close, size: 30),
         ),
         actions: [

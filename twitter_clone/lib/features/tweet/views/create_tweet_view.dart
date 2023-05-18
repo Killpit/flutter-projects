@@ -82,7 +82,15 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
         )
       ),
       ),
-      bottomNavigationBar: Row(
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          border: Border(
+            top: BorderSide(
+              color: Pallete.greyColor,
+              width: 0.3,
+              )),
+        ),
+        child: Row(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0).copyWith(
@@ -106,6 +114,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
             child: SvgPicture.asset(AssetsConstants.emojiIcon),
             ),
         ],
+      ),
       ),
     );
   }

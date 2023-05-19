@@ -91,9 +91,10 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
             ),
             if(images.isNotEmpty)
             CarouselSlider(items: images.map(
-              (file) => Image.file(file),
-              )
-              .toList(),
+              (file) {
+                return Image.file(file);
+              },
+            ).toList(),
               options: CarouselOptions(
                 height: 400,
                 enableInfiniteScroll: false,

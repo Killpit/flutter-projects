@@ -51,4 +51,15 @@ class TweetController extends StateNotifier<bool> {
     }
     return link;
   }
+
+  List<String> _getHashtagsFromText(String text) {
+    List<String> hashtags = [];
+    List<String> wordsInSentence = text.split(' ');
+    for(String word in wordsInSentence) {
+      if(word.startsWith('#')) {
+        hashtags.add(word);
+      }
+    }
+    return hashtags;
+  }
 }

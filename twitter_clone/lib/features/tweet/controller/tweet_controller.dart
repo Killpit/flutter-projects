@@ -17,7 +17,17 @@ class TweetController extends StateNotifier<bool> {
     }
 
     if(images.isNotEmpty) {
-
+      _shareImageTweet(
+        images: images,
+        text: text,
+        context: context,
+      );
+    } else {
+      _shareTextTweet(
+        images: images,
+        text: text,
+        context: context,
+      );
     }
   }
 
@@ -25,7 +35,11 @@ class TweetController extends StateNotifier<bool> {
     required List<File> images,
     required String text,
     required BuildContext context,
-  }) {
-    
-  }
+  }) {}
+
+  void _shareTextTweet({
+    required List<File> images,
+    required String text,
+    required BuildContext context,
+  }) {}
 }

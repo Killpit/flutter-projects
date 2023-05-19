@@ -96,7 +96,8 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
                 margin: const EdgeInsets.symmetric(
                   horizontal: 5,
                 ),
-                child: Image.file(file));
+                child: Image.file(file),
+                );
               },
             ).toList(),
               options: CarouselOptions(

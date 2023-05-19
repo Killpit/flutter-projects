@@ -1,8 +1,10 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:twitter_clone/common/common.dart';
 import 'package:twitter_clone/constants/assets_constants.dart';
+import 'package:twitter_clone/core/utils.dart';
 import 'package:twitter_clone/features/auth/controller/auth_controller.dart';
 import 'package:twitter_clone/features/home/view/home_view.dart';
 import 'package:twitter_clone/theme/pallete.dart';
@@ -20,11 +22,17 @@ class CreateTweetScreen extends ConsumerStatefulWidget {
 
 class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
   final tweetTextController = TextEditingController();
+  List<File> images = [];
   
   @override
   void dispose() {
     super.dispose();
     tweetTextController.dispose();
+  }
+
+  void onPickImages() async {
+    images = (await pickImages()).cast<File>();
+    setState(() {});
   }
 
   @override
@@ -100,7 +108,8 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
               left: 15,
               right: 15,
             ),
-            child: SvgPicture.asset(AssetsConstants.galleryIcon),
+            child: GestureDetector(onTap: onPickImages,
+            child: SvgPicture.asset(AssetsConstants.galleryIcon)),
             ),
             Padding(
             padding: const EdgeInsets.all(8.0).copyWith(

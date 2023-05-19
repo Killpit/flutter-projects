@@ -40,4 +40,15 @@ class TweetController extends StateNotifier<bool> {
     required String text,
     required BuildContext context,
   }) {}
+
+  String _getLinkFromText(String text) {
+    String link = '';
+    List<String> wordsInSentence = text.split(' ');
+    for(String word in wordsInSentence) {
+      if(word.startsWith('https://') || word.startsWith('www.')) {
+        link = word;
+      }
+    }
+    return link;
+  }
 }

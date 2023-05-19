@@ -24,7 +24,6 @@ class TweetController extends StateNotifier<bool> {
       );
     } else {
       _shareTextTweet(
-        images: images,
         text: text,
         context: context,
       );
@@ -38,7 +37,6 @@ class TweetController extends StateNotifier<bool> {
   }) {}
 
   void _shareTextTweet({
-    required List<File> images,
     required String text,
     required BuildContext context,
   }) {}

@@ -33,7 +33,11 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
   }
 
   void ShareTweet() {
-    ref.read(tweetControllerProvider);
+    ref.read(tweetControllerProvider.notifier).shareTweet(
+      images: images, 
+      text: tweetTextController.text, 
+      context: context,
+      );
   }
 
   void onPickImages() async {

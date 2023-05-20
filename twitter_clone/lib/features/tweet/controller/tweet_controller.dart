@@ -79,6 +79,7 @@ class TweetController extends StateNotifier<bool> {
       uid: user.uid,
       );
       final res = await _tweetAPI.shareTweet(tweet);
+      state = false;
       res.fold((l) => showSnackBar(context, l.message), (r) => null); 
   }
 

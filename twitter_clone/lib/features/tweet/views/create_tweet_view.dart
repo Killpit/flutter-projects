@@ -32,7 +32,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
     tweetTextController.dispose();
   }
 
-  void ShareTweet() {
+  void shareTweet() {
     ref.read(tweetControllerProvider.notifier).shareTweet(
       images: images, 
       text: tweetTextController.text, 
@@ -60,7 +60,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
         ),
         actions: [
           RoundedSmallButton(
-            onTap: () {}, 
+            onTap: shareTweet, 
             label: 'Tweet', 
             backgroundColor: Pallete.blueColor,
             textColor: Pallete.whiteColor),

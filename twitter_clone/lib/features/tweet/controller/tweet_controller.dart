@@ -12,7 +12,8 @@ final tweetControllerProvider = StateNotifierProvider<TweetController, bool>((re
     ref: ref,
     tweetAPI: ref.watch(tweetAPIProvider),
     );
-});
+},
+);
 
 class TweetController extends StateNotifier<bool> {
   final TweetAPI _tweetAPI;

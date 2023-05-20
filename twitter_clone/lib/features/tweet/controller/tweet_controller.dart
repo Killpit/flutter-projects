@@ -71,6 +71,7 @@ class TweetController extends StateNotifier<bool> {
       uid: user.uid,
       );
       final res = await _tweetAPI.shareTweet(tweet);
+      res.fold((l) => showSnackBar(context, l.message), (r) => null); 
   }
 
   String _getLinkFromText(String text) {

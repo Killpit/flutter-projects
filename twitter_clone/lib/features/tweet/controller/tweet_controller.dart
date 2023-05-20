@@ -7,6 +7,13 @@ import 'package:twitter_clone/core/utils.dart';
 import 'package:twitter_clone/features/auth/controller/auth_controller.dart';
 import 'package:twitter_clone/models/tweet_model.dart';
 
+final tweetControllerProvider = StateNotifierProvider<TweetController, bool>((ref) {
+  return TweetController(
+    ref: ref,
+    tweetAPI: ref.watch(tweetAPIProvider),
+    );
+});
+
 class TweetController extends StateNotifier<bool> {
   final TweetAPI _tweetAPI;
   final Ref _ref;

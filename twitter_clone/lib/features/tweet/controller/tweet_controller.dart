@@ -1,7 +1,9 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:twitter_clone/core/enums/tweet_type_enum.dart';
 import 'package:twitter_clone/core/utils.dart';
+import 'package:twitter_clone/models/tweet_model.dart';
 
 class TweetController extends StateNotifier<bool> {
   TweetController(): super(false);
@@ -41,7 +43,23 @@ class TweetController extends StateNotifier<bool> {
   void _shareTextTweet({
     required String text,
     required BuildContext context,
-  }) {}
+  }) {
+    state = true;
+    final hashtags = _getHashtagsFromText(text);
+    String link = _getLinkFromText(text);
+    Tweet tweet = Tweet(
+      text: text, 
+      hashtags: hashtags, 
+      link: link, 
+      imageLinks: [], 
+      commentIds: [], 
+      id: '', 
+      likes: [], 
+      reshareCount: 0, 
+      tweetType: TweetType.text, 
+      tweetedAt: DateTime.now(), 
+      uid: '', );
+  }
 
   String _getLinkFromText(String text) {
     String link = '';

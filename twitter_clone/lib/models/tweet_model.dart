@@ -69,7 +69,6 @@ class Tweet {
       'tweetedAt': tweetedAt.millisecondsSinceEpoch,
       'likes': likes,
       'commentIds': commentIds,
-      'id': id,
       'reshareCount': reshareCount,
     };
   }
@@ -85,7 +84,7 @@ class Tweet {
       tweetedAt: DateTime.fromMillisecondsSinceEpoch(map['tweetedAt']),
       likes: List<String>.from(map['likes']),
       commentIds: List<String>.from(map['commentIds']),
-      id: map['id'] ?? '',
+      id: map['\$id'] ?? '',
       reshareCount: map['reshareCount']?.toInt() ?? 0,
     );
   }

@@ -9,8 +9,8 @@ import 'package:twitter_clone/core/type_defs.dart';
 import 'package:twitter_clone/models/tweet_model.dart';
 
 final tweetAPIProvider = Provider((ref) {
-  return TweetAPI(db: ref.watch(
-    appwriteDatabaseProvider),
+  return TweetAPI(
+    db: ref.watch(appwriteDatabaseProvider),
     );
 });
 

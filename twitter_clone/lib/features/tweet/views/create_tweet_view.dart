@@ -48,6 +48,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
   @override
   Widget build(BuildContext context) {
     final currentUser = ref.watch(currentUserDetailsProvider).value;
+    final isLoading = ref.watch(tweetControllerProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -65,7 +66,7 @@ class _CreateTweetScreenState extends ConsumerState<CreateTweetScreen>{
             textColor: Pallete.whiteColor),
         ],
       ),
-      body: currentUser == null 
+      body: isLoading || currentUser == null 
           ? const Loader() 
           : SafeArea(
         child: SingleChildScrollView(

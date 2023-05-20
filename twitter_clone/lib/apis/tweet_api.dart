@@ -1,10 +1,18 @@
 import 'dart:html';
 import 'package:appwrite/appwrite.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:twitter_clone/constants/appwrite_constants.dart';
 import 'package:twitter_clone/core/failure.dart';
+import 'package:twitter_clone/core/providers.dart';
 import 'package:twitter_clone/core/type_defs.dart';
 import 'package:twitter_clone/models/tweet_model.dart';
+
+final tweetAPIProvider = Provider((ref) {
+  return TweetAPI(db: ref.watch(
+    appwriteDatabaseProvider),
+    );
+});
 
 abstract class ITweetAPI {
   FutureEither<Document> shareTweet(Tweet tweet);

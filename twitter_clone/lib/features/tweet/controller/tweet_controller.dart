@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:twitter_clone/core/enums/tweet_type_enum.dart';
 import 'package:twitter_clone/core/utils.dart';
+import 'package:twitter_clone/features/auth/controller/auth_controller.dart';
 import 'package:twitter_clone/models/tweet_model.dart';
 
 class TweetController extends StateNotifier<bool> {
-  TweetController(): super(false);
+  final Ref _ref;
+  TweetController({required Ref ref}): _ref = ref, super(false);
   
   void shareTweet({
     required List<File> images,
@@ -47,6 +49,7 @@ class TweetController extends StateNotifier<bool> {
     state = true;
     final hashtags = _getHashtagsFromText(text);
     String link = _getLinkFromText(text);
+    final user = _ref.read(currentUserDetailsProvider).value!;
     Tweet tweet = Tweet(
       text: text, 
       hashtags: hashtags, 
@@ -58,7 +61,8 @@ class TweetController extends StateNotifier<bool> {
       reshareCount: 0, 
       tweetType: TweetType.text, 
       tweetedAt: DateTime.now(), 
-      uid: '', );
+      uid: user.uid,
+      );
   }
 
   String _getLinkFromText(String text) {

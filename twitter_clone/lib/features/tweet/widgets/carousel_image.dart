@@ -24,7 +24,9 @@ class _CarouselImageState extends State<CarouselImage> {
                         items: widget.imageLinks.map(
                           (link) {
                             return Container(
-                              width: MediaQuery.of(context).size.width,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25),
+                              ),
                               margin: const EdgeInsets.all(10),
                               child: Image.network(
                                 link, 

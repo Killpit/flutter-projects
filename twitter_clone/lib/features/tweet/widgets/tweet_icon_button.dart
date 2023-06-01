@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class TweetIconButton extends StatelessWidget {
   final String pathName;
@@ -14,6 +15,13 @@ class TweetIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GestureDetector(
+      onTap: onTap,
+      child: Row(
+        children: [
+          SvgPicture.asset(pathName),
+        ],
+      ),
+    );
   }
 }

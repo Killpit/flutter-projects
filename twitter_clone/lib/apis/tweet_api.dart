@@ -17,6 +17,7 @@ final tweetAPIProvider = Provider((ref) {
 abstract class ITweetAPI {
   FutureEither<Document> shareTweet(Tweet tweet);
   Future<List<Document>> getTweets();
+  Stream<RealtimeMessage> getLatestTweet();
 }
 
 class TweetAPI implements ITweetAPI {
@@ -52,5 +53,11 @@ class TweetAPI implements ITweetAPI {
       collectionId: AppwriteConstants.tweetsCollection,
       );
       return documents.documents;
+  }
+  
+  @override
+  Stream<RealtimeMessage> getLatestTweet() {
+    // TODO: implement getLatestTweet
+    throw UnimplementedError();
   }
 }

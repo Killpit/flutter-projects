@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:twitter_clone/theme/pallete.dart';
 
 class TweetIconButton extends StatelessWidget {
   final String pathName;
@@ -19,7 +20,7 @@ class TweetIconButton extends StatelessWidget {
       onTap: onTap,
       child: Row(
         children: [
-          SvgPicture.asset(pathName),
+          SvgPicture.asset(pathName, color: Pallete.greyColor),
         ],
       ),
     );
